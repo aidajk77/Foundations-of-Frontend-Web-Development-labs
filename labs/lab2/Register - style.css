@@ -1,0 +1,83 @@
+
+.a1{
+    display: inline-block;
+    margin-right: 31px;
+    
+}
+.a2{
+    display: flex;
+    margin-bottom: 5px;
+}
+.a1lab{
+    display: block;
+    margin-bottom: 5px;
+}
+body{
+    color: white;
+    background-color: #85AFD4;
+    margin-left: 30%;
+    margin-right: 40%;
+}
+#inte{
+    margin-left: 29.5%;
+}
+#pass{
+    margin-left: 30.2%;
+}
+#date{
+    margin-left:25.7%;
+}
+#place{
+    margin-left: 24%;
+}
+img{
+    margin-left: 40%;
+    height: 20px;
+}
+h1,h2{
+    text-align: center;
+}
+.a3{
+    margin-top: 30px;
+}
+.a4{
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 140px;
+}
+#radio{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 8px;
+    
+}
+#email{
+    margin-top: 12px;
+}
+#emaill{
+    margin-left: 36%;
+}
+#phone{
+    margin-left: 35.5%;
+}
+#color{
+    margin-left: 36.5%;
+}
+textarea{
+    width: 90%;
+}
+#button{
+    display: block;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    height: 50px;
+    width: 320px;
+    font-size: large;
+    background-color: red;
+    border-width: thin;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}

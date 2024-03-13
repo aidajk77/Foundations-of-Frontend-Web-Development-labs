@@ -1,0 +1,19 @@
+body{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #85AFD4;
+    
+}
+table,th,td{
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 20px;
+    text-align: center;
+}
+*{font-family: "Lato";
+    color: white;
+    
+}
+h2{
+    font-weight: bold;
+}
