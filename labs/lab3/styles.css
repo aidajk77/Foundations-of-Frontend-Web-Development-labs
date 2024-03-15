@@ -1,0 +1,45 @@
+.top{
+    display: flex;
+    background-color: pink;
+    max-height: 250px;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.heading{
+    display: flexbox;
+    font-size: 110px;
+    font-weight: 500;
+    padding-left: 6%;
+    margin: 0%;
+    padding-top: 110px;
+}
+p{
+    margin-bottom: 35px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 18;
+    line-height: 28px;
+}
+#greeting{
+    font-size: 20;
+}
+.pictures{
+    display: flex;
+    background-color: #CDD0CF;
+    justify-content: space-around;
+}
+figcaption{
+    margin-top: 20px;
+    font-size: 15;
+}
+#boldp{
+    font-weight: bold;
+}
+#lastp{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}    
+footer{
+    background-color: pink;
+    text-align: center;
+}
