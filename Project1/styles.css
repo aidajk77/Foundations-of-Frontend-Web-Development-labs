@@ -1,0 +1,111 @@
+/*general*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto";
+    background-color: #ded7d9;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*navigation-bar*/
+
+nav, .nav-links{
+    display: flex;
+    
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    background-color: #F6F3F4;
+}
+.nav-links{
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+li a{
+    padding: 20px;
+    text-decoration: none;
+    color: #2B2728;
+    overflow: hidden;
+    transition: all 150ms ease;
+    border-radius: 5px;
+}
+li a:hover{
+    background-color: #2B2728;
+    color: #F6F3F4
+}
+.logo{
+    font-size: 2rem;
+    font-family: "Dancing Script";
+}
+.logo:hover{
+    cursor: default;
+}
+
+/*home*/
+
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 60vh;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cv{
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: #2B2728;
+    color: #F6F3F4;
+    margin-left: 60px;
+    border-style: hidden;
+}
+.cv:active{
+    background-color: #444242;
+    transform: all 150ms ease;
+}
+.cv:hover{
+    cursor: pointer;
+}
+#greyp{
+    color: #2B2728;
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+}
+#hello{
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+}
+h1{
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+}
+.icon{
+    height: 30px;
+    width: auto;
+    border-radius: 100%;
+}
+.socials_logos{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
