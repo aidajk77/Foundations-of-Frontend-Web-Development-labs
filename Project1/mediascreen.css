@@ -26,14 +26,14 @@
     #skills, .article_container{
         margin-top: 2rem;
     }
-    #profile, .section-container{
-        display: block;
-    }
     section, .section-container{
         height: fit-content;
     }
+    #profile{
+        height: fit-content;
+    }
     #about{
-        margin-top: 38%;
+        margin-top: 2rem;
     }
     section{
         margin: 0 5%;
@@ -57,6 +57,9 @@
 
 }
 @media screen and (max-width:600px) {
+    #profile, .section-container{
+        display: block;
+    }
     #profile{
         height: 83vh;
         margin-bottom: 0;
