@@ -90,6 +90,9 @@
     .logo{
         font-size: 1.5rem;
     }
+    #about{
+        margin-top: 0;
+    }
     #contact{
         margin:0;
     }
