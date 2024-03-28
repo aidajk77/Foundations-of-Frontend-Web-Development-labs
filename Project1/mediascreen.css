@@ -32,6 +32,9 @@
     section, .section-container{
         height: fit-content;
     }
+    #about{
+        margin-top: 38%;
+    }
     section{
         margin: 0 5%;
     }
