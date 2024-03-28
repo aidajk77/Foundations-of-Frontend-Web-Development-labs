@@ -1,0 +1,102 @@
+@media screen and (max-width:1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    section{
+        height: 83vh;
+    }
+    .about-containers{
+        flex-wrap: wrap;
+    }
+    #contact{
+        margin-top: 10rem;
+        height: fit-content;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    #desktop-nav{
+        display: none;
+    }
+    #hamburger-nav{
+        display: flex;
+    }
+    #skills, .article_container{
+        margin-top: 2rem;
+    }
+    #profile, .section-container{
+        display: block;
+    }
+    section, .section-container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;
+    }
+    .pic-container{
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+
+    }
+    .about-containers{
+        margin-top: 0;
+    }
+    #contact{
+        margin: 0;
+    }
+    .contact-container{
+        gap:1rem;
+    }
+    
+
+}
+@media screen and (max-width:600px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 0;
+    }
+    article{
+        font-size: 1rem;
+    }
+    .about-containers, .btn-container{
+        flex-wrap: wrap;
+
+    }
+    .nav-links a{
+        font-size: 1rem;
+    }
+    
+    .nav-links{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center ;
+    }
+    .p2{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .text-container{
+        text-align: justify;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    #contact{
+        margin:0;
+    }
+    .contact-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer nav{
+        height: fit-content;
+    }
+    
+}
+

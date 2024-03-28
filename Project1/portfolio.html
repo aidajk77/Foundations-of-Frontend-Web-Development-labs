@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Name - Portfolio</title>
+    <title>Aid Ajkunic- Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="edge">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="mediascreen.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,27 +16,45 @@
     </header>
 
     
-    <nav>
+    <nav id="desktop-nav">
         <div class="logo">Aid Ajkunic</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills_container">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
     </nav>
-    <section id="home">
-        <div class="left_side_home">
-            <img src="man.jpg" alt="man">
+    
+    <nav id="hamburger-nav">
+        <div class="logo">Aid Ajkunic</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="right_side_home">
-            <p id="hello">Hello, I'm</p>
-            <h1>Aid Ajkunic</h1>
-            <p id="greyp">IT Student</p>
-            <button class="cv">Download CV</button>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>    
+    </nav>
+    
+    <section id="profile">
+        <div class="pic-container">
+            <img src="man.jpg" alt="man" class="man1">
+        </div>
+        <div class="text-container">
+            <p class="p1">Hello, I'm</p>
+            <h1 class="title">Aid Ajkunic</h1>
+            <p class="p2">IT Student</p>
+            <div class="btn-container"><button class="btn cv">Download CV</button></div>
             <div class="socials_logos">
                 <img src="linkedin.png" alt="linkedin logo" class="icon">
                 <img src="github.png" alt="github logo" class="icon">
@@ -48,65 +64,147 @@
         </div>
         
     </section>    
+
     <section id="about">
-        <div class="about_top">
-            <p class="p_top">Get to know more</p>
-            <h1>About me</h1>
-        </div>
-        <div class="about_main">
-            <div class="about_pic">
+            <p class="p1">Get to know more</p>
+            <h1 class="title">About me</h1>
+        <div class="section-container">
+            <div class="pic-container">
                 <img src="man2.jpg" alt="man2" class="man2">
             </div>
-            <div class="about_text">
-                <p>Hey there! I'm Aid Ajkunic, a first-year IT student at Burch University. With a passion for technology, I'm on a journey to explore the ever-evolving world of IT. From coding to networking, I thrive on challenges that push me to grow.</p>
+            <div class="about-details-containers">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="experience.png" alt="experience-icon" class="icon">
+                        <h1>Experience</h1>
+                        <p>Beginner <br>Software Developer</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="education.png" alt="education-icon" class="icon">
+                        <h1>Education</h1>
+                        <p>Technician of Computing and Informatics<br>1st year of IT</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Hey there! I'm Aid Ajkunic, a first-year IT student at Burch University. With a passion for technology, I'm on a journey to explore the ever-evolving world of IT. From coding to networking, I thrive on challenges that push me to grow.</p>
+                </div>
             </div>
         </div>
-        <section id="skills">
-            <div class="skills_top">
-                <p class="p_top">Explore my</p>
-                <h1>Skills</h1>
-            </div>
-            <div class="skills_container">
-                <ul class="skills_list">
-                <li>&check; Html</li>
-                <li>&check; Python</li>
-                <li>&check; JavaScript</li>
-                <li>&check; c++</li>
-                <li>&check; css</li>
-            </ul>
+    </section>    
+    <section id="skills_container">
+            <p class="p1">Explore my</p>
+            <h1 class="title">Skills</h1>
+            <div class="article_container">
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>HTML</h3>
+                    <p>Intermediate</p>
+                </article>
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>CSS</h3>
+                    <p>Intermediate</p>
+                </article>
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>JavaScript</h3>
+                    <p>Basic</p>
+                </article>
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>Bootstrap</h3>
+                    <p>Basic</p>
+                </article>
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>C++</h3>
+                    <p>Intermediate</p>
+                </article>
+                <article>
+                    <img src="experience.png" alt="experience-icon" class="icon">
+                    <h3>Python</h3>
+                    <p>Intermediate</p>
+                </article>
             </div>
         </section>
 
-
     </section>
     <section id="projects">
-        <div class="projects_top">
-            <p class="p_top">Browse my recent </p>
-            <h1>Projects</h1>
-        </div>
-        <div class="projects_main">
-            <p>No projects to show for now...</p>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="section_main">
-            <div class="contact_left_side">
-                <input type="text" placeholder="Enter your name" id="name">
-                <input type="email" placeholder="Enter your email" id="email">
-                <input type="number" placeholder="Enter your number" id="phone">
-                <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
+            <p class="p1">Browse my recent </p>
+            <h1 class="title">Projects</h1>
+        <div class="project-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="project-container">
+                        <img src="project-1.png" alt="project-1" class="projectpic">
+                    </div>    
+                        <h2 class="project-title"> Project One</h2>
+                        <div class="btn-container">
+                            <button class="btn project-btn">GitHub</button>
+                            <button class="btn project-btn">Live Demo </button>
+                        </div>
+                </div>    
+                <div class="details-container color-container">    
+                    <div class="project-container">
+                        <img src="project-2.png" alt="project-2" class="projectpic">
+                    </div>   
+                        <h2 class="project-title"> Project Two</h2>
+                        <div class="btn-container">
+                            <button class="btn project-btn">GitHub</button>
+                            <button class="btn project-btn">Live Demo </button>
+                        </div>
+                </div>
+                
+                <div class="details-container color-container">
+                    <div class="project-container">
+                        <img src="project-3.png" alt="project-3" class="projectpic">
+                    </div>
+                        <h2 class="project-title"> Project Three</h2>
+                        <div class="btn-container">
+                            <button class="btn project-btn">GitHub</button>
+                            <button class="btn project-btn">Live Demo </button>
+                        </div>
+                    </div>
+                </div>    
             </div>
-            <div class="contact_right_side">
-    
-            </div>
-        </div>
         
     </section>
+    <section id="contact">
+        <p class="p1">Get in Touch </p>
+        <h1 class="title">Contact me</h1>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button class="btn cv">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="contact-stuff">
+                <p><img src="location.png" alt="Location Icon" class="icon">123 Street Name, City, Country</p>
+                <p><img src="phone.png" alt="Phone Icon" class="icon">+123 456 7890</p>
+                <p><img src="email.png" alt="Email Icon" class="icon">example@example.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills_container">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; All rights reserved</p>
+    </footer>
 
-
-
-    
-
-   
+   <script src ="script.js"></script>
 </body>
 </html>
