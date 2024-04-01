@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sort a HTML Table Alphabetically</title>
+<style>
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
+</head>
+<body>
+
+<table id="myTable">
+  <tr> 
+    <th onclick="sortTable(0)">ID</th>
+    <th onclick="sortTable(1)">Name</th>
+    <th onclick="sortTable(2)">Country</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>John Doe</td>
+    <td>Sweden</td>
+    <td>lfaslasa@example.com</td>
+    <td><button onclick="showModal('John Doe')">click</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>North/South</td>
+    <td>UK</td>
+    <td>jaakajdsjadsa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Jane Smith</td>
+    <td>Germany</td>
+    <td>jfasfafasa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Jim Brown</td>
+    <td>Germany</td>
+    <td>jaaa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Jake White</td>
+    <td>Italy</td>
+    <td>jdassaa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Julie Black</td>
+    <td>France</td>
+    <td>jdsadaaa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Jennifer Green </td>
+    <td>UK</td>
+    <td>fasfasfaaa@example.com</td>
+    <td><button>click</button></td>
+  </tr>
+</table>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+function showModal(userName) {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  var modalText = document.getElementById("modalText");
+  modalText.innerHTML = "You clicked on the user: " + userName;
+  modal.style.display = "block";
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }}
+</script>
+
+</body>
+</html>
