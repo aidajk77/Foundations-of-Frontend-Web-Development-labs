@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, th{
+            padding: 10px;
+         }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+
+    </table>
+    <script>
+        var myArray = [
+	    ['Michael','30','11/10/1989'],
+	    ['Mila', '32', '10/1/1989'],
+	    ['Paul', '29', '10/14/1990'],
+	];
+        let letter=["name","surname","number"]
+        let list=[["a","a","a",],["b","b","b"],["c","c","c"]]
+        let table=document.getElementById("myTable");
+        let text="<tr>";
+        text+="<th>"+letter[0]+"</th>";
+        text+="<th>"+letter[1]+"</th>";
+        text+="<th>"+letter[2]+"</th>";
+        text+="</tr>";
+        table.innerHTML+=text;
+        myArray.forEach(element => {
+            text="<tr>";
+            text+="<td>"+element[0]+"</td>";
+            text+="<td>"+element[1]+"</td>";
+            text+="<td>"+element[2]+"</td>";
+            text+="</tr>"
+            table.innerHTML+=text;
+
+            
+        });
+
+                
+    
+    </script>
+</body>
+
+</html>

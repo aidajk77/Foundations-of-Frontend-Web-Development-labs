@@ -91,7 +91,7 @@ tr:nth-child(even) {
   </div>
 <script>
 function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = false;
   table = document.getElementById("myTable");
   switching = true;
   dir = "asc"; 
@@ -118,9 +118,9 @@ function sortTable(n) {
     if (shouldSwitch) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
-      switchcount ++;      
+      switchcount = true;      
     } else {
-      if (switchcount == 0 && dir == "asc") {
+      if (switchcount == false && dir == "asc") {
         dir = "desc";
         switching = true;
       }
