@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Explore nutrition and wellness programs at IBU Muscles" />
+        <meta name="author" content="" />
+        <title>IBU Muscles - Nutrition & Wellness</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">IBU Nutrition & Wellness</a>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">Embrace a Healthier Lifestyle</h1>
+                            <p class="lead text-white-50 mb-4">Discover our nutrition and wellness programs designed to support your journey towards better health and wellbeing.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#programs">View Programs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Programs section-->
+        <section class="py-5" id="programs">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Our Programs</h2>
+                    <p class="lead mb-0">Explore the variety of nutrition and wellness programs we offer.</p>
+                </div>
+                <div class="row gx-5">
+                    <!-- Program 1 -->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="card h-100">
+                            <img src="assets/imgs/nutrition1.jpeg" class="card-img-top" alt="Program 1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bolder">Personalized Nutrition Plans</h5>
+                                <p class="card-text">Get a tailored nutrition plan that suits your dietary needs and goals.</p>
+                                <a href="#!" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 2 -->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="card h-100">
+                            <img src="assets/imgs/wellness_coaching.jpeg" class="card-img-top" alt="Program 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bolder">Wellness Coaching</h5>
+                                <p class="card-text">Work with a wellness coach to develop healthy habits and improve your overall wellbeing.</p>
+                                <a href="#!" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 3 -->
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <img src="assets/imgs/meditation.jpeg" class="card-img-top" alt="Program 3">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bolder">Mindfulness and Meditation</h5>
+                                <p class="card-text">Join our mindfulness and meditation sessions to reduce stress and enhance mental clarity.</p>
+                                <a href="#!" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section-->
+        <section class="py-5 border-bottom" id="testimonials">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Participant Testimonials</h2>
+                    <p class="lead mb-0">Hear from our participants about their experiences with our nutrition and wellness programs.</p>
+                </div>
+                <div class="row gx-5 justify-content-center testimonials"></div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-5">
+                <p class="m-0 text-center text-white">Copyright &copy; IBU Nutrition & Wellness 2024</p>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="scripts.js"></script>
+        <!-- Testimonials data -->
+        <script>
+            const testimonials = [
+                {
+                    name: "Anna M.",
+                    text: "The personalized nutrition plan has transformed my eating habits. I feel healthier and more energetic.",
+                    image: "client1.jpg"
+                },
+                {
+                    name: "James W.",
+                    text: "Wellness coaching has helped me build a balanced routine and stay motivated on my health journey.",
+                    image: "client2.jpg"
+                },
+                {
+                    name: "Lena P.",
+                    text: "The mindfulness sessions have been a game-changer for my mental health. Highly recommend!",
+                    image: "client3.jpg"
+                }
+            ];
+
+            window.onload = () => {
+                const testimonialContainer = document.querySelector('.testimonials');
+                testimonials.forEach(t => {
+                    const div = document.createElement('div');
+                    div.classList.add('col-lg-4', 'mb-5', 'mb-lg-0');
+                    div.innerHTML = `
+                        <div class="card h-100 shadow border-0">
+                            <i class="bi bi-chat-right-quote-fill text-primary fs-1"></i>
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-3">${t.name}</h5>
+                                <p class="card-text mb-0">${t.text}</p>
+                            </div>
+                        </div>
+                    `;
+                    testimonialContainer.appendChild(div);
+                });
+            };
+        </script>
+    </body>
+</html>

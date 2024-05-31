@@ -1,0 +1,39 @@
+<section class="py-5 border-bottom">
+    <div class="container px-5 my-5 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">What Our Clients Say</h2>
+            <p class="lead mb-0">Discover how our gym has helped our clients achieve their fitness goals.</p>
+        </div>
+        <div class="container"></div>
+            <div class="row gx-5 justify-content-center testimonials">
+                
+            </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+                $.ajax({
+                    url: 'data/testimonials.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var testimonials = data.testimonials;
+                        var testimonialsContainer = $('.testimonials');
+
+                        $.each(testimonials, function(index, testimonial){
+                            var card = $('<div class="col-lg-6"></div>');
+                            var cardContent = $('<div class="card mb-4"><div class="card-body p-4"><div class="d-flex"><div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div><div class="ms-4"><p class="mb-1"></p><div class="small text-muted"></div></div></div></div></div>');
+                            
+                            cardContent.find('p').text('"' + testimonial.quote + '"');
+                            cardContent.find('.small.text-muted').text('- ' + testimonial.author);
+
+                            card.append(cardContent);
+                            testimonialsContainer.append(card);
+                        });
+                    },
+                    error: function(){
+                        console.log('Error loading data.');
+                    }
+                });
+            });
+
+    </script>
+</section>
